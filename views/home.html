@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ice Cream Order Form</title>
+  <link rel="stylesheet" href="/styles/ice-cream.css">
+  <link rel = "icon" href = "/images/pixel-cone.jpg">
+  <script src = "js/ice-cream.js" defer></script>
+</head>
+<body>
+
+  <div class="reservation-box">
+    <h1>Ice Cream Order Form</h1>
+    <form id="ice-cream-form" action = "#" method = "get">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <span id = "err-name" class = "error">Name cannot be empty!</span>
+        <input type="text" id="name">
+
+        <label for="email">Email:</label>
+        <span id = "err-email" class = "error">Email cannot be empty!</span>
+        <input type="email" id="email">
+      </fieldset>
+
+      <fieldset>
+        <legend>Order Information</legend>
+        <p>Choose your flavor: <span id = "err-flavor" class = "error">Please select a flavor!</span></p>
+        <select name = "flavor" id = "flavor">
+          <option value = "none">None</option>
+  	      <option value = "vanilla">Vanilla</option>
+  	      <option value = "choco">Chocolate</option>
+  	      <option value = "strawberry">Strawberry</option>
+        </select>
+
+        <br><p>Choose your cone: <span id = "err-cone" class = "error">Please select a cone type!</span></p>
+        <label for = "waffle">
+        <input type = "radio" id = "waffle" name = "cone" value = "waffle">Waffle Cone</label>
+        <label for = "sugar">
+        <input type = "radio" id = "sugar" name = "cone" value = "sugar">Sugar Cone</label>
+        <label for = "cup">
+        <input type = "radio" id = "cup" name = "cone" value = "cup">Cup</label>
+
+        <p>Toppings: </p>
+        <label for = "sprinkles">
+        <input type = "checkbox" id = "sprinkles" name = "toppings[]" value = "sprinkles"></label>Sprinkles
+        <label for = "nuts">
+        <input type = "checkbox" id = "nuts" name = "toppings[]" value = "nuts"></label>Nuts
+        <label for = "cherry">
+        <input type = "checkbox" id = "cherry" name = "toppings[]" value = "cherry"></label>Cherry
+        <label for = "cream">
+        <input type = "checkbox" id = "cream" name = "toppings[]" value = "cream"></label>Whipped Cream<br>
+
+        <p><label for="comments">Additional commments:</label></p>
+        <textarea id="comments" name="comments" rows="10" cols="62"></textarea>
+      </fieldset>
+
+      <button type="submit">Submit Order</button>
+    </form>
+
+  </div>
+
+</body>
+</html>

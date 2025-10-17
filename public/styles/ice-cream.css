@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightcyan;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+    
+.reservation-box {
+    background: white;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.reservation-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#name, #email {
+    width: 95%;
+}
+
+#flavor {
+    width: 100%;
+}
+
+button {
+    background: green;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.error {
+    color: red;
+    display: none;
+}
