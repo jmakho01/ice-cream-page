@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ice Cream Order Form</title>
+
+  <link rel = "icon" href = "/images/pixel-cone.jpg">
+
+  <link rel = "stylesheet" href = "/styles/ice-cream.css">
+  <link rel = "stylesheet" href = "//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+
+  <script src = "js/ice-cream.js" defer></script>
+  <script src="//code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+</head>
+<body>
+
+  <div class="admin-box">
+    <h1>Admin Page</h1>
+    <table id="order-table" class="display">
+      <thead>
+        <tr>
+          <th>Date/Time</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Flavor</th>
+          <th>Cone</th>
+          <th>Toppings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% orders.forEach(order => { %>
+
+        <tr>
+          <td><%= order.timestamp.toLocaleString() %></td>
+          <td><%= order.name %></td>
+          <td><%= order.email %></td>
+          <td><%= order.flavor %></td>
+          <td><%= order.cone %></td>
+          <td><%= order.toppings %></td>
+        </tr>
+
+        <% }); %>
+
+      </tbody>
+    </table>
+  </div>
+  <script defer>
+    let table = new DataTable('#order-table');
+  </script>
+</body>
+</html>
